@@ -4,15 +4,15 @@
 
 @layer base {
   .py-navbar-item {
-    @apply py-5
+    @apply py-6
   }
 
   .pt-navbar-item {
-    @apply pt-5
+    @apply pt-6
   }
 
   .pb-navbar-item {
-    @apply pb-5
+    @apply pb-6
   }
 
   .px-navbar-item {
