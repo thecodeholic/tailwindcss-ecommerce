@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .py-navbar-item {
+    @apply py-5
+  }
+
+  .pt-navbar-item {
+    @apply pt-5
+  }
+
+  .pb-navbar-item {
+    @apply pb-5
+  }
+
+  .px-navbar-item {
+    @apply px-3
+  }
+
+  .pl-navbar-item {
+    @apply pl-3
+  }
+
+  .pr-navbar-item {
+    @apply pr-3
+  }
+}
