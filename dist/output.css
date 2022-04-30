@@ -802,6 +802,10 @@ select {
   margin-right: 1rem;
 }
 
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
 .block {
   display: block;
 }
@@ -900,6 +904,10 @@ select {
 
 .w-\[400px\] {
   width: 400px;
+}
+
+.w-\[800px\] {
+  width: 800px;
 }
 
 .min-w-0 {
