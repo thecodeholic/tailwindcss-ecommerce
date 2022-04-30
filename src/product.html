@@ -7,7 +7,7 @@
   </head>
   <body>
     <header class="flex justify-between bg-slate-800 shadow-md text-white">
-      <a href="/" class="inline-block py-navbar-item pl-5"> Logo </a>
+      <a href="/src" class="inline-block py-navbar-item pl-5"> Logo </a>
       <nav>
         <ul class="grid grid-flow-col">
           <li>
@@ -28,8 +28,8 @@
         </ul>
       </nav>
       <nav>
-        <ul class="grid grid-flow-col">
-          <li>
+        <ul class="grid grid-flow-col items-center">
+          <li class="hidden">
             <a
               href="#"
               class="inline-flex items-center py-navbar-item px-navbar-item"
@@ -51,7 +51,7 @@
               Cart
             </a>
           </li>
-          <li>
+          <li class="hidden">
             <a href="#" class="inline-flex py-navbar-item px-navbar-item pr-5">
               My Account
               <svg
@@ -67,7 +67,7 @@
                 />
               </svg>
             </a>
-            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48 hidden">
+            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48">
               <li class="hover:bg-slate-900">
                 <a href="#" class="inline-flex px-3 py-2">
                   <svg
@@ -146,10 +146,277 @@
               </li>
             </ul>
           </li>
+          <li>
+            <a
+              href="#"
+              class="inline-flex items-center py-navbar-item px-navbar-item"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                />
+              </svg>
+              Login
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="inline-flex items-center text-white bg-emerald-600 py-2 px-3 rounded shadow-md hover:bg-emerald-700 active:bg-emerald-800 transition-colors mx-5"
+            >
+              Register now
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    
+    <main class="p-5">
+      <div class="container mx-auto">
+        <div class="grid gap-6 grid-cols-5">
+          <div class="col-span-3">
+            <div class="aspect-square flex items-center">
+              <img src="/src/img/1_1.jpg" alt="" />
+            </div>
+            <div class="flex relative">
+              <button
+                class="absolute left-0 top-0 h-full text-white bg-black/30 hover:bg-black/50"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                class="absolute right-0 top-0 h-full text-white bg-black/30 hover:bg-black/50"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+              <a
+                href="#"
+                class="flex items-center w-24 h-24 border border-1 border-gray-300 hover:border hover:border-purple-600 transition-colors"
+              >
+                <img src="/src/img/1_1.jpg" alt="" />
+              </a>
+              <a
+                href="#"
+                class="flex items-center w-24 h-24 border border-1 border-gray-300 hover:border hover:border-purple-600 transition-colors"
+              >
+                <img src="/src/img/1_2.jpg" alt="" />
+              </a>
+              <a
+                href="#"
+                class="flex items-center w-24 h-24 border border-1 border-gray-300 hover:border hover:border-purple-600 transition-colors"
+              >
+                <img src="/src/img/1_3.jpg" alt="" />
+              </a>
+              <a
+                href="#"
+                class="flex items-center w-24 h-24 border border-1 border-gray-300 hover:border hover:border-purple-600 transition-colors"
+              >
+                <img src="/src/img/1_4.jpg" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col-span-2">
+            <h1 class="text-lg font-semibold">
+              Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K
+              Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
+            </h1>
+            <div class="text-xl font-bold mb-6">$17.99</div>
+            <div class="flex items-center mb-6">
+              <div class="flex items-center text-orange-400">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                  />
+                </svg>
+              </div>
+              <a
+                href="#"
+                class="ml-3 font-normal text-purple-600 hover:text-purple-500"
+              >
+                67 reviews
+              </a>
+            </div>
+            <div class="flex items-center justify-between mb-5">
+              <label for="quantity" class="block font-bold mr-4">
+                Quantity
+              </label>
+              <input
+                type="number"
+                name="quantity"
+                value="1"
+                class="w-32 focus:border-purple-500 focus:outline-none rounded"
+              />
+            </div>
+            <button
+              class="btn-primary py-4 text-lg flex justify-center min-w-0 w-full mb-6"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              Add to Cart
+            </button>
+            <div class="text-gray-500 mb-6 wysiwyg-content">
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Connectivity Technology</td>
+                    <td>USB</td>
+                  </tr>
+                  <tr>
+                    <td>Recommended Uses For Product</td>
+                    <td>Gaming</td>
+                  </tr>
+                  <tr>
+                    <td>Brand</td>
+                    <td>Logitech G</td>
+                  </tr>
+                  <tr>
+                    <td>Compatible Devices</td>
+                    <td>Personal Computer</td>
+                  </tr>
+                  <tr>
+                    <td>Series</td>
+                    <td>Logitech G502 HERO High Performance Gaming Mouse</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p class="">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Deserunt suscipit natus quisquam optio voluptatem quo beatae ex
+                similique, pariatur laborum asperiores explicabo delectus culpa
+                cumque corrupti quasi incidunt at quos!
+              </p>
+              <h4>About the item</h4>
+              <ul class="list-disc pl-6">
+                <li>
+                  Hero 25K sensor through a software update from G HUB, this
+                  upgrade is free to all players: Our most advanced, with 1:1
+                  tracking, 400-plus ips, and 100 - 25,600 max dpi sensitivity
+                  plus zero smoothing, filtering, or acceleration
+                </li>
+                <li>
+                  11 customizable buttons and onboard memory: Assign custom
+                  commands to the buttons and save up to five ready to play
+                  profiles directly to the mouse
+                </li>
+                <li>
+                  Adjustable weight system: Arrange up to five removable 3.6
+                  grams weights inside the mouse for personalized weight and
+                  balance tuning
+                </li>
+                <li>
+                  Programmable RGB Lighting and Lightsync technology: Customize
+                  lighting from nearly 16.8 million colors to match your team's
+                  colors, sport your own or sync colors with other Logitech G
+                  gear
+                </li>
+                <li>
+                  Mechanical switch button tensioning: Metal spring tensioning
+                  system and pivot hinges are built into left and right gaming
+                  mouse buttons for a crisp, clean click feel with rapid click
+                  feedback
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>
