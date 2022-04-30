@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-200">
+    <header class="flex justify-between bg-slate-800 shadow-md text-white">
+      <a href="/src" class="inline-block py-navbar-item pl-5"> Logo </a>
+      <nav>
+        <ul class="grid grid-flow-col">
+          <li>
+            <a
+              href="/src/index.html"
+              class="inline-block py-navbar-item px-navbar-item"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" class="inline-block py-navbar-item px-navbar-item"
+              >Categories</a
+            >
+          </li>
+          <li>
+            <a href="#" class="inline-block py-navbar-item px-navbar-item"
+              >Something</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="grid grid-flow-col items-center">
+          <li>
+            <a
+              href="/src/cart.html"
+              class="inline-flex items-center py-navbar-item px-navbar-item"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 mr-2 -mt-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+              Cart
+            </a>
+          </li>
+          <li class="relative">
+            <a href="#" class="inline-flex py-navbar-item px-navbar-item pr-5">
+              My Account
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48">
+              <li class="hover:bg-slate-900">
+                <a href="/src/profile.html" class="inline-flex px-3 py-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                  My Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/src/watchlist.html"
+                  class="inline-flex items-center px-3 py-2"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-2 -mt-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                  Watchlist
+                </a>
+              </li>
+              <li class="hover:bg-slate-900">
+                <a href="/src/orders.html" class="inline-flex px-3 py-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                    />
+                  </svg>
+                  My Orders
+                </a>
+              </li>
+              <li class="hover:bg-slate-900">
+                <a href="/src/logout.html" class="inline-flex px-3 py-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 mr-2"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                    />
+                  </svg>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="/src/login.html"
+              class="inline-flex items-center py-navbar-item px-navbar-item"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 mr-2"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                />
+              </svg>
+              Login
+            </a>
+          </li>
+          <li>
+            <a
+              href="/src/signup.html"
+              class="inline-flex items-center text-white bg-emerald-600 py-2 px-3 rounded shadow-md hover:bg-emerald-700 active:bg-emerald-800 transition-colors mx-5"
+            >
+              Register now
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="p-5">
+      <div class="container mx-auto">
+        <div class="grid grid-cols-5 items-start gap-6">
+          <div class="col-span-3 bg-white p-4 rounded shadow">
+            <!-- Profile Details -->
+            <div class="mb-6">
+              <h2 class="text-xl mb-5">Your Profile</h2>
+              <div class="mb-4">
+                <input
+                  placeholder="Your Name"
+                  type="text"
+                  name="name"
+                  class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  placeholder="Your Email"
+                  type="email"
+                  name="email"
+                  class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                />
+              </div>
+              <div class="mb-4">
+                <input
+                  placeholder="Your Phone"
+                  type="text"
+                  name="phone"
+                  class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                />
+              </div>
+            </div>
+            <!--/ Profile Details -->
+
+            <!-- Billing Address -->
+            <div class="mb-6">
+              <h2 class="text-xl mb-5">Billing Address</h2>
+              <div class="flex gap-3">
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="Address 1"
+                    type="text"
+                    name="billing_address_1"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="Address 2"
+                    type="text"
+                    name="billing_address_2"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="City"
+                    type="text"
+                    name="billing_city"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="State"
+                    type="text"
+                    name="billing_state"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mb-4 flex-1">
+                  <select
+                    placeholder="Country"
+                    type="text"
+                    name="billing_country"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  >
+                    <option value="">Country</option>
+                    <option value="ge">Georgia</option>
+                    <option value="de">Germany</option>
+                    <option value="in">India</option>
+                    <option value="us">United Kingdom</option>
+                    <option value="uk">United States</option>
+                  </select>
+                </div>
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="Zipcode"
+                    type="text"
+                    name="billing_zipcode"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--/ Billing Address -->
+
+            <!-- Shipping Address -->
+            <div class="mb-6">
+              <div class="flex items-center justify-between mb-5">
+                <h2 class="text-xl">Shipping Address</h2>
+                <div class="flex items-center">
+                  <input
+                    id="sameAsBillingAddress"
+                    type="checkbox"
+                    class="mr-3 rounded border-gray-300 text-purple-500 focus:ring-purple-500"
+                  />
+                  <label for="sameAsBillingAddress">Same as Billing</label>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="Address 1"
+                    type="text"
+                    name="shipping_address_1"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="Address 2"
+                    type="text"
+                    name="shipping_address_2"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="City"
+                    type="text"
+                    name="shipping_city"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="State"
+                    type="text"
+                    name="shipping_state"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <div class="mb-4 flex-1">
+                  <select
+                    placeholder="Country"
+                    type="text"
+                    name="shipping_country"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  >
+                    <option value="">Country</option>
+                    <option value="ge">Georgia</option>
+                    <option value="de">Germany</option>
+                    <option value="in">India</option>
+                    <option value="us">United Kingdom</option>
+                    <option value="uk">United States</option>
+                  </select>
+                </div>
+                <div class="mb-4 flex-1">
+                  <input
+                    placeholder="Zipcode"
+                    type="text"
+                    name="shipping_zipcode"
+                    class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+                  />
+                </div>
+              </div>
+            </div>
+            <!--/ Shipping Address -->
+
+            <button class="btn-primary w-full">Update</button>
+          </div>
+
+          <div class="col-span-2 bg-white p-4 rounded-lg shadow">
+            <h2 class="text-xl mb-5">Your Account</h2>
+            <div class="mb-4">
+              <input
+                type="password"
+                name="password"
+                placeholder="Your Current password"
+                class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+              />
+            </div>
+            <div class="mb-4">
+              <input
+                type="password"
+                name="password"
+                placeholder="New password"
+                class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+              />
+            </div>
+            <div class="mb-4">
+              <input
+                type="password"
+                name="password"
+                placeholder="Repeat new password"
+                class="border-gray-300 focus:border-purple-500 focus:outline-none focus:ring-purple-500 rounded-md w-full"
+              />
+            </div>
+            <div>
+              <button class="btn-primary">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
