@@ -46,3 +46,8 @@
 .wysiwyg-content table > tbody > tr > td:first-child {
   font-weight: bold;
 }
+
+.table>tbody>tr>td,
+.table>thead>tr>th {
+  padding: 0.5rem;
+}
