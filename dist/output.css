@@ -1059,6 +1059,16 @@ select {
   background-color: rgb(0 0 0 / 0.3);
 }
 
+.bg-orange-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+}
+
+.bg-gray-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .p-5 {
   padding: 1.25rem;
 }
