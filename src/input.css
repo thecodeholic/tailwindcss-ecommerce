@@ -34,6 +34,10 @@
   }
 }
 
+body {
+  background-color: #e5e7eb;
+}
+
 .wysiwyg-content h3, 
 .wysiwyg-content h4 {
     font-weight: 600;
@@ -50,4 +54,8 @@
 .table>tbody>tr>td,
 .table>thead>tr>th {
   padding: 0.5rem;
+}
+.table-sm>tbody>tr>td,
+.table-sm>thead>tr>th {
+  padding: 0.25rem;
 }

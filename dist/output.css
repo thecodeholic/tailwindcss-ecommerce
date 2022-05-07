@@ -765,6 +765,11 @@ select {
   margin-bottom: 4rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -849,6 +854,10 @@ select {
   height: 2.5rem;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -887,6 +896,10 @@ select {
 
 .w-\[400px\] {
   width: 400px;
+}
+
+.w-16 {
+  width: 4rem;
 }
 
 .w-64 {
@@ -989,20 +1002,16 @@ select {
   border-width: 1px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border-t {
   border-top-width: 1px;
 }
 
-.border-b {
-  border-bottom-width: 1px;
-}
-
 .border-b-2 {
   border-bottom-width: 2px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .border-gray-300 {
@@ -1030,14 +1039,14 @@ select {
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
-.bg-purple-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 51 234 / var(--tw-bg-opacity));
-}
-
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-emerald-500 {
@@ -1045,9 +1054,14 @@ select {
   background-color: rgb(16 185 129 / var(--tw-bg-opacity));
 }
 
-.bg-white {
+.bg-gray-500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
+.bg-orange-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
 }
 
 .bg-red-500 {
@@ -1057,16 +1071,6 @@ select {
 
 .bg-black\/30 {
   background-color: rgb(0 0 0 / 0.3);
-}
-
-.bg-orange-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
-}
-
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 
 .p-5 {
@@ -1245,6 +1249,10 @@ select {
   transition-duration: 150ms;
 }
 
+body {
+  background-color: #e5e7eb;
+}
+
 .wysiwyg-content h3, 
 .wysiwyg-content h4 {
   font-weight: 600;
@@ -1262,6 +1270,11 @@ select {
 .table>tbody>tr>td,
 .table>thead>tr>th {
   padding: 0.5rem;
+}
+
+.table-sm>tbody>tr>td,
+.table-sm>thead>tr>th {
+  padding: 0.25rem;
 }
 
 .hover\:rotate-1:hover {
@@ -1297,11 +1310,6 @@ select {
 .hover\:bg-purple-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(147 51 234 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-purple-700:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-emerald-600:hover {
@@ -1377,6 +1385,10 @@ select {
 @media (min-width: 1280px) {
   .xl\:w-1\/2 {
     width: 50%;
+  }
+
+  .xl\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .xl\:grid-cols-4 {
