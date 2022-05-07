@@ -713,6 +713,10 @@ select {
   background-color: rgb(107 33 168 / var(--tw-bg-opacity));
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -725,12 +729,16 @@ select {
   right: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
 
-.top-0 {
-  top: 0px;
+.bottom-0 {
+  bottom: 0px;
 }
 
 .z-10 {
@@ -768,6 +776,11 @@ select {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .mr-2 {
@@ -834,6 +847,10 @@ select {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
@@ -850,16 +867,16 @@ select {
   height: 8rem;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .h-10 {
   height: 2.5rem;
 }
 
 .h-16 {
   height: 4rem;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .h-8 {
@@ -888,6 +905,10 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[220px\] {
+  width: 220px;
 }
 
 .w-10 {
@@ -986,12 +1007,12 @@ select {
   border-radius: 0.25rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
 }
 
 .rounded-full {
@@ -1039,14 +1060,14 @@ select {
   background-color: rgb(5 150 105 / var(--tw-bg-opacity));
 }
 
-.bg-gray-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .bg-emerald-500 {
@@ -1243,6 +1264,12 @@ select {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-transform {
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1321,6 +1348,11 @@ body {
   background-color: rgb(0 0 0 / 0.5);
 }
 
+.hover\:bg-slate-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
 .hover\:text-purple-500:hover {
   --tw-text-opacity: 1;
   color: rgb(168 85 247 / var(--tw-text-opacity));
@@ -1367,6 +1399,14 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1383,10 +1423,6 @@ body {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-1\/2 {
-    width: 50%;
-  }
-
   .xl\:w-2\/3 {
     width: 66.666667%;
   }
