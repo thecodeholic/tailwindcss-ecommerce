@@ -4,16 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
-    
-    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"
+    ></script>
+    <script src="app.js"></script>
   </head>
-  <body>
-    <header x-data="{menuOpen: false}" class="flex justify-between bg-slate-800 shadow-md text-white">
+  <body x-data="productList">
+    <header
+      x-data="{menuOpen: false}"
+      class="flex justify-between bg-slate-800 shadow-md text-white"
+    >
       <div>
         <a href="/src" class="block py-navbar-item pl-5"> Logo </a>
       </div>
       <div
-        class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden" :class="menuOpen ? 'left-0' : 'left-[-220px]'"
+        class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
+        :class="menuOpen ? 'left-0' : 'left-[-220px]'"
       >
         <ul>
           <li>
@@ -62,7 +70,11 @@
             </a>
           </li>
           <li class="relative" x-data="{open: false}">
-            <a href="#" class="flex justify-between items-center py-2 px-3 hover:bg-slate-800" @click="open = !open"> 
+            <a
+              href="#"
+              class="flex justify-between items-center py-2 px-3 hover:bg-slate-800"
+              @click="open = !open"
+            >
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,9 +105,16 @@
                 />
               </svg>
             </a>
-            <ul class="z-10 right-0 bg-slate-800 py-2" x-show="open" x-transition>
+            <ul
+              class="z-10 right-0 bg-slate-800 py-2"
+              x-show="open"
+              x-transition
+            >
               <li>
-                <a href="/src/profile.html" class="flex px-3 py-2 hover:bg-slate-900">
+                <a
+                  href="/src/profile.html"
+                  class="flex px-3 py-2 hover:bg-slate-900"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 mr-2"
@@ -243,7 +262,7 @@
           <li>
             <a
               href="/src/cart.html"
-              class="inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900"
+              class="flex relative items-center py-navbar-item px-navbar-item hover:bg-slate-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -260,10 +279,20 @@
                 />
               </svg>
               Cart
+              <template x-if="cartItemCount > 0">
+                <span
+                  class="absolute top-4 -right-1 bg-red-600 text-white px-2 rounded-xl"
+                  x-text="cartItemCount"
+                ></span>
+              </template>
             </a>
           </li>
           <li class="relative" x-data="{open: false}">
-            <a href="#" class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900" @click="open = !open">
+            <a
+              href="#"
+              class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
+              @click="open = !open"
+            >
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +323,11 @@
                 />
               </svg>
             </a>
-            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48" x-show="open" @click.outside="open = !open">
+            <ul
+              class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
+              x-show="open"
+              @click.outside="open = !open"
+            >
               <li>
                 <a
                   href="/src/profile.html"
@@ -479,7 +512,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -522,7 +555,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -565,7 +598,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -608,7 +641,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -651,7 +684,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -694,7 +727,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -737,7 +770,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -780,7 +813,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -823,7 +856,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -866,7 +899,7 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
@@ -909,12 +942,36 @@
                 />
               </svg>
             </button>
-            <button class="btn-primary">Add to Cart</button>
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
           </div>
         </div>
         <!--/ Product Item -->
       </div>
       <!--/ Product List -->
     </main>
+
+    <div
+      class="fixed flex justify-between items-center left-1/2 top-16 -translate-x-1/2 z-40 shadow-xl bg-green-600 text-white py-3 px-4 rounded" x-show="notification.show" style="display: none"
+    >
+      <span x-text="notification.message"></span>
+      <button class="w-6 h-6 ml-4 flex justify-center items-center rounded-full transition-colors hover:bg-black/20"
+        @click="notification.show = false"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
   </body>
 </html>
