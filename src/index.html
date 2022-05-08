@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
   </head>
   <body>
-    <header class="flex justify-between bg-slate-800 shadow-md text-white">
+    <header x-data="{menuOpen: false}" class="flex justify-between bg-slate-800 shadow-md text-white">
       <div>
         <a href="/src" class="block py-navbar-item pl-5"> Logo </a>
       </div>
       <div
-        class="block fixed z-10 top-0 left-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
+        class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden" :class="menuOpen ? 'left-0' : 'left-[-220px]'"
       >
         <ul>
           <li>
@@ -360,7 +362,7 @@
           </li>
         </ul>
       </nav>
-      <button class="p-4 block md:hidden">
+      <button class="p-4 block md:hidden" @click="menuOpen = !menuOpen">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
