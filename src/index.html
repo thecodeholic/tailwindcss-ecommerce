@@ -57,8 +57,8 @@
               Cart
             </a>
           </li>
-          <li class="relative">
-            <a href="#" class="flex justify-between items-center py-2 px-3">
+          <li class="relative" x-data="{open: false}">
+            <a href="#" class="flex justify-between items-center py-2 px-3" @click="open = !open"> 
               <span>My Account</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@
                 />
               </svg>
             </a>
-            <ul class="z-10 right-0 bg-slate-800 py-2">
+            <ul class="z-10 right-0 bg-slate-800 py-2" x-show="open">
               <li class="hover:bg-slate-900">
                 <a href="/src/profile.html" class="inline-flex px-3 py-2">
                   <svg
@@ -232,8 +232,8 @@
               Cart
             </a>
           </li>
-          <li class="relative">
-            <a href="#" class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900">
+          <li class="relative" x-data="{open: false}">
+            <a href="#" class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900" @click="open = !open">
               My Account
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -248,7 +248,7 @@
                 />
               </svg>
             </a>
-            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48">
+            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48" x-show="open" @click.outside="open = !open">
               <li>
                 <a href="/src/profile.html" class="flex px-3 py-2 hover:bg-slate-900">
                   <svg
