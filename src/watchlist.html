@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
   </head>
   <body>
-    <header class="flex justify-between bg-slate-800 shadow-md text-white">
+    <header x-data="{menuOpen: false}" class="flex justify-between bg-slate-800 shadow-md text-white">
       <div>
         <a href="/src" class="block py-navbar-item pl-5"> Logo </a>
       </div>
       <div
-        class="block fixed z-10 top-0 left-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
+        class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden" :class="menuOpen ? 'left-0' : 'left-[-220px]'"
       >
         <ul>
           <li>
@@ -59,11 +61,8 @@
               Cart
             </a>
           </li>
-          <li class="relative">
-            <a
-              href="#"
-              class="flex justify-between items-center py-2 px-3 hover:bg-slate-800"
-            >
+          <li class="relative" x-data="{open: false}">
+            <a href="#" class="flex justify-between items-center py-2 px-3 hover:bg-slate-800" @click="open = !open"> 
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -94,12 +93,9 @@
                 />
               </svg>
             </a>
-            <ul class="z-10 right-0 bg-slate-800 py-2">
+            <ul class="z-10 right-0 bg-slate-800 py-2" x-show="open" x-transition>
               <li>
-                <a
-                  href="/src/profile.html"
-                  class="flex items-center px-3 py-2 hover:bg-slate-900"
-                >
+                <a href="/src/profile.html" class="inline-flex px-3 py-2 hover:bg-slate-900">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5 mr-2"
@@ -266,11 +262,8 @@
               Cart
             </a>
           </li>
-          <li class="relative">
-            <a
-              href="#"
-              class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
-            >
+          <li class="relative" x-data="{open: false}">
+            <a href="#" class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900" @click="open = !open">
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -301,7 +294,7 @@
                 />
               </svg>
             </a>
-            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48">
+            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48" x-show="open" @click.outside="open = !open">
               <li>
                 <a
                   href="/src/profile.html"
@@ -424,7 +417,7 @@
           </li>
         </ul>
       </nav>
-      <button class="p-4 block md:hidden">
+      <button class="p-4 block md:hidden" @click="menuOpen = !menuOpen">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
