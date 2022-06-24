@@ -5,23 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
 
+<<<<<<< Updated upstream
+=======
+    <!-- Alpine Plugins -->
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/persist@3.10.2/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/collapse@3.10.2/dist/cdn.min.js"
+    ></script>
+    <script defer src="app.js"></script>
+>>>>>>> Stashed changes
     <script
       defer
       src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"
     ></script>
+<<<<<<< Updated upstream
     <script src="app.js"></script>
   </head>
   <body x-data="productList">
     <header
       x-data="{menuOpen: false}"
+=======
+
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      x-data="{mobileMenuOpen: false}"
+>>>>>>> Stashed changes
       class="flex justify-between bg-slate-800 shadow-md text-white"
     >
       <div>
         <a href="/src" class="block py-navbar-item pl-5"> Logo </a>
       </div>
+      <!-- Responsive Menu -->
       <div
         class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
+<<<<<<< Updated upstream
         :class="menuOpen ? 'left-0' : 'left-[-220px]'"
+=======
+        :class="mobileMenuOpen ? 'left-0' : '-left-[220px]'"
+>>>>>>> Stashed changes
       >
         <ul>
           <li>
@@ -50,9 +81,15 @@
           <li>
             <a
               href="/src/cart.html"
+<<<<<<< Updated upstream
               class="flex relative items-center py-2 px-3 transition-colors hover:bg-slate-800"
             >
               <span class="flex items-center justify-between">
+=======
+              class="relative flex items-center justify-between py-2 px-3 transition-colors hover:bg-slate-800"
+            >
+              <div class="flex items-center">
+>>>>>>> Stashed changes
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5 mr-2 -mt-1"
@@ -68,6 +105,7 @@
                   />
                 </svg>
                 Cart
+<<<<<<< Updated upstream
               </span>
               <template x-if="cartItemCount > 0">
                 <span
@@ -82,6 +120,23 @@
               href="#"
               class="flex justify-between items-center py-2 px-3 hover:bg-slate-800"
               @click="open = !open"
+=======
+              </div>
+              <!-- Cart Items Counter -->
+              <small
+                x-show="$store.header.cartItems"
+                x-transition
+                x-text="$store.header.cartItems"
+                class="py-[2px] px-[8px] rounded-full bg-red-500"
+              ></small>
+              <!--/ Cart Items Counter -->
+            </a>
+          </li>
+          <li x-data="{open: false}" class="relative">
+            <a
+              @click="open = !open"
+              class="cursor-pointer flex justify-between items-center py-2 px-3 hover:bg-slate-800"
+>>>>>>> Stashed changes
             >
               <span class="flex items-center">
                 <svg
@@ -114,9 +169,15 @@
               </svg>
             </a>
             <ul
+<<<<<<< Updated upstream
               class="z-10 right-0 bg-slate-800 py-2"
               x-show="open"
               x-transition
+=======
+              x-show="open"
+              x-transition
+              class="z-10 right-0 bg-slate-800 py-2"
+>>>>>>> Stashed changes
             >
               <li>
                 <a
@@ -160,6 +221,13 @@
                     />
                   </svg>
                   Watchlist
+
+                  <small
+                    x-show="$store.header.watchlistItems"
+                    x-transition
+                    x-text="$store.header.watchlistItems"
+                    class="py-[2px] px-[8px] rounded-full bg-red-500"
+                  ></small>
                 </a>
               </li>
               <li class="hover:bg-slate-900">
@@ -240,6 +308,7 @@
           </li>
         </ul>
       </div>
+      <!--/ Responsive Menu -->
       <nav class="hidden md:block">
         <ul class="grid grid-flow-col">
           <li>
@@ -270,7 +339,11 @@
           <li>
             <a
               href="/src/cart.html"
+<<<<<<< Updated upstream
               class="flex relative items-center py-navbar-item px-navbar-item hover:bg-slate-900"
+=======
+              class="relative inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900"
+>>>>>>> Stashed changes
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -287,6 +360,7 @@
                 />
               </svg>
               Cart
+<<<<<<< Updated upstream
               <template x-if="cartItemCount > 0">
                 <span
                   class="absolute top-4 -right-1 bg-red-600 text-white px-2 rounded-xl"
@@ -301,6 +375,21 @@
               class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
               @click="open = !open"
               @click.outside="open = false"
+=======
+              <small
+                x-show="$store.header.cartItems"
+                x-transition
+                x-cloak
+                x-text="$store.header.cartItems"
+                class="absolute z-[100] top-4 -right-3 py-[2px] px-[8px] rounded-full bg-red-500"
+              ></small>
+            </a>
+          </li>
+          <li x-data="{open: false}" class="relative">
+            <a
+              @click="open = !open"
+              class="cursor-pointer flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
+>>>>>>> Stashed changes
             >
               <span class="flex items-center">
                 <svg
@@ -333,9 +422,17 @@
               </svg>
             </a>
             <ul
+<<<<<<< Updated upstream
               class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
               x-show="open"
               x-transition
+=======
+              @click.outside="open = false"
+              x-show="open"
+              x-transition
+              x-cloak
+              class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
+>>>>>>> Stashed changes
             >
               <li>
                 <a
@@ -362,23 +459,32 @@
               <li>
                 <a
                   href="/src/watchlist.html"
-                  class="flex items-center px-3 py-2 hover:bg-slate-900"
+                  class="flex items-center justify-between px-3 py-2 hover:bg-slate-900"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                  Watchlist
+                  <div class="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                    Watchlist
+                  </div>
+
+                  <small
+                    x-show="$store.header.watchlistItems"
+                    x-transition
+                    x-text="$store.header.watchlistItems"
+                    class="py-[2px] px-[8px] rounded-full bg-red-500"
+                  ></small>
                 </a>
               </li>
               <li>
@@ -459,7 +565,14 @@
           </li>
         </ul>
       </nav>
+<<<<<<< Updated upstream
       <button class="p-4 block md:hidden" @click="menuOpen = !menuOpen">
+=======
+      <button
+        @click="mobileMenuOpen = !mobileMenuOpen"
+        class="p-4 block md:hidden"
+      >
+>>>>>>> Stashed changes
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -484,6 +597,12 @@
       >
         <!-- Product Item -->
         <div
+          x-data="productItem({
+            id: 1, 
+            image: 'img/1_1.jpg', 
+            title: 'Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11',
+            price: 17.99
+          })"
           class="border border-1 border-gray-200 rounded-md hover:border-purple-600 transition-colors bg-white"
         >
           <a href="/src/product.html" class="block overflow-hidden">
@@ -504,8 +623,14 @@
           </div>
           <div class="flex justify-between py-3 px-4">
             <button
+<<<<<<< Updated upstream
               class="w-10 h-10 rounded-full border border-1 border-purple-600 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white active:bg-purple-800 transition-colors"
               @click="addToWatchlist"
+=======
+              @click="addToWatchlist()"
+              class="w-10 h-10 rounded-full border border-1 border-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white active:bg-purple-800 transition-colors"
+              :class="isInWatchlist(id) ? 'bg-purple-600 text-white' : 'text-purple-600'"
+>>>>>>> Stashed changes
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -522,7 +647,70 @@
                 />
               </svg>
             </button>
+<<<<<<< Updated upstream
             <button class="btn-primary" @click="addToCart">Add to Cart</button>
+=======
+            <button class="btn-primary" @click="addToCart(id)">
+              Add to Cart
+            </button>
+>>>>>>> Stashed changes
+          </div>
+        </div>
+        <!--/ Product Item -->
+        <!-- Product Item -->
+        <div
+          x-data="productItem({
+            id: 2, 
+            image: 'img/1_1.jpg', 
+            title: 'Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11',
+            price: 20
+          })"
+          class="border border-1 border-gray-200 rounded-md hover:border-purple-600 transition-colors bg-white"
+        >
+          <a href="/src/product.html" class="block overflow-hidden">
+            <img
+              src="/src/img/1_1.jpg"
+              alt=""
+              class="rounded-lg hover:scale-105 hover:rotate-1 transition-transform"
+            />
+          </a>
+          <div class="p-4">
+            <h3 class="text-lg">
+              <a href="/src/product.html">
+                Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K
+                Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
+              </a>
+            </h3>
+            <h5 class="font-bold">$17.99</h5>
+          </div>
+          <div class="flex justify-between py-3 px-4">
+            <button
+              @click="addToWatchlist()"
+              class="w-10 h-10 rounded-full border border-1 border-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white active:bg-purple-800 transition-colors"
+              :class="isInWatchlist(id) ? 'bg-purple-600 text-white' : 'text-purple-600'"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                />
+              </svg>
+            </button>
+<<<<<<< Updated upstream
+            <button class="btn-primary" @click="addToCart">Add to Cart</button>
+=======
+            <button class="btn-primary" @click="addToCart(id)">
+              Add to Cart
+            </button>
+>>>>>>> Stashed changes
           </div>
         </div>
         <!--/ Product Item -->
@@ -565,50 +753,13 @@
                 />
               </svg>
             </button>
+<<<<<<< Updated upstream
             <button class="btn-primary" @click="addToCart">Add to Cart</button>
-          </div>
-        </div>
-        <!--/ Product Item -->
-        <!-- Product Item -->
-        <div
-          class="border border-1 border-gray-200 rounded-md hover:border-purple-600 transition-colors bg-white"
-        >
-          <a href="/src/product.html" class="block overflow-hidden">
-            <img
-              src="/src/img/1_1.jpg"
-              alt=""
-              class="rounded-lg hover:scale-105 hover:rotate-1 transition-transform"
-            />
-          </a>
-          <div class="p-4">
-            <h3 class="text-lg">
-              <a href="/src/product.html">
-                Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K
-                Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
-              </a>
-            </h3>
-            <h5 class="font-bold">$17.99</h5>
-          </div>
-          <div class="flex justify-between py-3 px-4">
-            <button
-              class="w-10 h-10 rounded-full border border-1 border-purple-600 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white active:bg-purple-800 transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                />
-              </svg>
+=======
+            <button class="btn-primary" @click="addToCart()">
+              Add to Cart
             </button>
-            <button class="btn-primary" @click="addToCart">Add to Cart</button>
+>>>>>>> Stashed changes
           </div>
         </div>
         <!--/ Product Item -->
@@ -960,6 +1111,7 @@
       <!--/ Product List -->
     </main>
 
+<<<<<<< Updated upstream
     <div
       class="fixed flex justify-between items-center left-1/2 top-16 -translate-x-1/2 z-40 shadow-xl bg-green-600 text-white py-3 px-4 rounded"
       x-show="notification.show"
@@ -973,6 +1125,25 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-5 w-5"
+=======
+    <!-- Toast -->
+    <div
+      x-data="toast"
+      x-show="visible"
+      x-transition
+      x-cloak
+      @notify.window="show($event.detail.message)"
+      class="fixed w-[400px] left-1/2 -ml-[200px] top-16 py-2 px-4 pb-4 bg-emerald-500 text-white"
+    >
+      <div class="font-semibold" x-text="message"></div>
+      <button
+        @click="close"
+        class="absolute flex items-center justify-center right-2 top-2 w-[30px] h-[30px] rounded-full hover:bg-black/10 transition-colors"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+>>>>>>> Stashed changes
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -985,6 +1156,18 @@
           />
         </svg>
       </button>
+<<<<<<< Updated upstream
     </div>
+=======
+      <!-- Progress -->
+      <div>
+        <div
+          class="absolute left-0 bottom-0 right-0 h-[6px] bg-black/10"
+          :style="{'width': `${percent}%`}"
+        ></div>
+      </div>
+    </div>
+    <!--/ Toast -->
+>>>>>>> Stashed changes
   </body>
 </html>

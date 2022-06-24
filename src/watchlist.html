@@ -4,16 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+<<<<<<< Updated upstream
     
     <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
   </head>
   <body>
     <header x-data="{menuOpen: false}" class="flex justify-between bg-slate-800 shadow-md text-white">
+=======
+
+    <!-- Alpine Plugins -->
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/persist@3.10.2/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/collapse@3.10.2/dist/cdn.min.js"
+    ></script>
+    <script defer src="app.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"
+    ></script>
+
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      x-data="{mobileMenuOpen: false}"
+      class="flex justify-between bg-slate-800 shadow-md text-white"
+    >
+>>>>>>> Stashed changes
       <div>
         <a href="/src" class="block py-navbar-item pl-5"> Logo </a>
       </div>
+      <!-- Responsive Menu -->
       <div
+<<<<<<< Updated upstream
         class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden" :class="menuOpen ? 'left-0' : 'left-[-220px]'"
+=======
+        class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
+        :class="mobileMenuOpen ? 'left-0' : '-left-[220px]'"
+>>>>>>> Stashed changes
       >
         <ul>
           <li>
@@ -42,27 +78,45 @@
           <li>
             <a
               href="/src/cart.html"
-              class="flex items-center py-2 px-3 transition-colors hover:bg-slate-800"
+              class="relative flex items-center justify-between py-2 px-3 transition-colors hover:bg-slate-800"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5 mr-2 -mt-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              Cart
+              <div class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 mr-2 -mt-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                Cart
+              </div>
+              <!-- Cart Items Counter -->
+              <small
+                x-show="$store.header.cartItems"
+                x-transition
+                x-text="$store.header.cartItems"
+                class="py-[2px] px-[8px] rounded-full bg-red-500"
+              ></small>
+              <!--/ Cart Items Counter -->
             </a>
           </li>
+<<<<<<< Updated upstream
           <li class="relative" x-data="{open: false}">
             <a href="#" class="flex justify-between items-center py-2 px-3 hover:bg-slate-800" @click="open = !open"> 
+=======
+          <li x-data="{open: false}" class="relative">
+            <a
+              @click="open = !open"
+              class="cursor-pointer flex justify-between items-center py-2 px-3 hover:bg-slate-800"
+            >
+>>>>>>> Stashed changes
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +147,15 @@
                 />
               </svg>
             </a>
+<<<<<<< Updated upstream
             <ul class="z-10 right-0 bg-slate-800 py-2" x-show="open" x-transition>
+=======
+            <ul
+              x-show="open"
+              x-transition
+              class="z-10 right-0 bg-slate-800 py-2"
+            >
+>>>>>>> Stashed changes
               <li>
                 <a href="/src/profile.html" class="flex px-3 py-2 hover:bg-slate-900">
                   <svg
@@ -133,6 +195,13 @@
                     />
                   </svg>
                   Watchlist
+
+                  <small
+                    x-show="$store.header.watchlistItems"
+                    x-transition
+                    x-text="$store.header.watchlistItems"
+                    class="py-[2px] px-[8px] rounded-full bg-red-500"
+                  ></small>
                 </a>
               </li>
               <li class="hover:bg-slate-900">
@@ -213,6 +282,7 @@
           </li>
         </ul>
       </div>
+      <!--/ Responsive Menu -->
       <nav class="hidden md:block">
         <ul class="grid grid-flow-col">
           <li>
@@ -243,7 +313,7 @@
           <li>
             <a
               href="/src/cart.html"
-              class="inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900"
+              class="relative inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -260,10 +330,25 @@
                 />
               </svg>
               Cart
+              <small
+                x-show="$store.header.cartItems"
+                x-transition
+                x-cloak
+                x-text="$store.header.cartItems"
+                class="absolute z-[100] top-4 -right-3 py-[2px] px-[8px] rounded-full bg-red-500"
+              ></small>
             </a>
           </li>
+<<<<<<< Updated upstream
           <li class="relative" x-data="{open: false}">
             <a href="#" class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900" @click="open = !open">
+=======
+          <li x-data="{open: false}" class="relative">
+            <a
+              @click="open = !open"
+              class="cursor-pointer flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
+            >
+>>>>>>> Stashed changes
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +379,17 @@
                 />
               </svg>
             </a>
+<<<<<<< Updated upstream
             <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48" x-show="open" @click.outside="open = !open">
+=======
+            <ul
+              @click.outside="open = false"
+              x-show="open"
+              x-transition
+              x-cloak
+              class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
+            >
+>>>>>>> Stashed changes
               <li>
                 <a
                   href="/src/profile.html"
@@ -320,23 +415,32 @@
               <li>
                 <a
                   href="/src/watchlist.html"
-                  class="flex items-center px-3 py-2 hover:bg-slate-900"
+                  class="flex items-center justify-between px-3 py-2 hover:bg-slate-900"
                 >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5 mr-2"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                    />
-                  </svg>
-                  Watchlist
+                  <div class="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 mr-2"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                      />
+                    </svg>
+                    Watchlist
+                  </div>
+
+                  <small
+                    x-show="$store.header.watchlistItems"
+                    x-transition
+                    x-text="$store.header.watchlistItems"
+                    class="py-[2px] px-[8px] rounded-full bg-red-500"
+                  ></small>
                 </a>
               </li>
               <li>
@@ -417,7 +521,14 @@
           </li>
         </ul>
       </nav>
+<<<<<<< Updated upstream
       <button class="p-4 block md:hidden" @click="menuOpen = !menuOpen">
+=======
+      <button
+        @click="mobileMenuOpen = !mobileMenuOpen"
+        class="p-4 block md:hidden"
+      >
+>>>>>>> Stashed changes
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -440,87 +551,41 @@
         <h1 class="text-3xl font-bold mb-6">Your Watchlist</h1>
 
         <!-- Product Items -->
-        <div class="bg-white p-4 rounded-lg shadow">
-          <!-- Product Item -->
-          <div class="flex flex-col sm:flex-row items-center gap-4">
-            <img src="/src/img/1_1.jpg" class="w-36" alt="" />
-            <div class="flex flex-col justify-between">
-              <div class="flex justify-between mb-3">
-                <h3>
-                  Logitech G502 HERO High Performance Wired Gaming Mouse, HERO
-                  25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
-                </h3>
-                <span class="text-lg font-semibold"> $17.99 </span>
+        <div
+          x-data="{
+          get items() {
+            return this.$store.header.watchingItems
+          }
+        }"
+          class="bg-white p-4 rounded-lg shadow"
+        >
+          <template x-for="product of items">
+            <div>
+              <!-- Product Item -->
+              <div x-data="productItem(product)" class="flex flex-col sm:flex-row items-center gap-4">
+                <img src="/src/img/1_1.jpg" class="w-36" alt="" />
+                <div class="flex flex-col justify-between">
+                  <div class="flex justify-between mb-3">
+                    <h3>
+                      Logitech G502 HERO High Performance Wired Gaming Mouse,
+                      HERO 25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
+                    </h3>
+                    <span class="text-lg font-semibold"> $17.99 </span>
+                  </div>
+                  <div class="flex justify-end items-center">
+                    <a
+                      href="#"
+                      @click.prevent="removeFromWatchlist()"
+                      class="text-purple-600 hover:text-purple-500"
+                      >Remove</a
+                    >
+                  </div>
+                </div>
               </div>
-              <div class="flex justify-end items-center">
-                <a href="#" class="text-purple-600 hover:text-purple-500"
-                  >Remove</a
-                >
-              </div>
+              <!--/ Product Item -->
+              <hr class="my-5" />
             </div>
-          </div>
-          <!--/ Product Item -->
-          <hr class="my-5">
-          <!-- Product Item -->
-          <div class="flex flex-col sm:flex-row items-center gap-4">
-            <img src="/src/img/1_1.jpg" class="w-36" alt="" />
-            <div class="flex flex-col justify-between">
-              <div class="flex justify-between mb-3">
-                <h3>
-                  Logitech G502 HERO High Performance Wired Gaming Mouse, HERO
-                  25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
-                </h3>
-                <span class="text-lg font-semibold"> $17.99 </span>
-              </div>
-              <div class="flex justify-end items-center">
-                <a href="#" class="text-purple-600 hover:text-purple-500"
-                  >Remove</a
-                >
-              </div>
-            </div>
-          </div>
-          <!--/ Product Item -->
-          <hr class="my-5">
-          <!-- Product Item -->
-          <div class="flex flex-col sm:flex-row items-center gap-4">
-            <img src="/src/img/1_1.jpg" class="w-36" alt="" />
-            <div class="flex flex-col justify-between">
-              <div class="flex justify-between mb-3">
-                <h3>
-                  Logitech G502 HERO High Performance Wired Gaming Mouse, HERO
-                  25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
-                </h3>
-                <span class="text-lg font-semibold"> $17.99 </span>
-              </div>
-              <div class="flex justify-end items-center">
-                <a href="#" class="text-purple-600 hover:text-purple-500"
-                  >Remove</a
-                >
-              </div>
-            </div>
-          </div>
-          <!--/ Product Item -->
-          <hr class="my-5">
-          <!-- Product Item -->
-          <div class="flex flex-col sm:flex-row items-center gap-4">
-            <img src="/src/img/1_1.jpg" class="w-36" alt="" />
-            <div class="flex flex-col justify-between">
-              <div class="flex justify-between mb-3">
-                <h3>
-                  Logitech G502 HERO High Performance Wired Gaming Mouse, HERO
-                  25K Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
-                </h3>
-                <span class="text-lg font-semibold"> $17.99 </span>
-              </div>
-              <div class="flex justify-end items-center">
-                <a href="#" class="text-purple-600 hover:text-purple-500"
-                  >Remove</a
-                >
-              </div>
-            </div>
-          </div>
-          <!--/ Product Item -->
-          <hr class="my-5">
+          </template>
         </div>
         <!--/ Product Items -->
       </div>
