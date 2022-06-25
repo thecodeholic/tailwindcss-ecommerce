@@ -4,13 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
-<<<<<<< Updated upstream
-    
-    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
-  </head>
-  <body>
-    <header x-data="{menuOpen: false}" class="flex justify-between bg-slate-800 shadow-md text-white">
-=======
 
     <!-- Alpine Plugins -->
     <script
@@ -38,18 +31,13 @@
       x-data="{mobileMenuOpen: false}"
       class="flex justify-between bg-slate-800 shadow-md text-white"
     >
->>>>>>> Stashed changes
       <div>
         <a href="/src" class="block py-navbar-item pl-5"> Logo </a>
       </div>
       <!-- Responsive Menu -->
       <div
-<<<<<<< Updated upstream
-        class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden" :class="menuOpen ? 'left-0' : 'left-[-220px]'"
-=======
         class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
         :class="mobileMenuOpen ? 'left-0' : '-left-[220px]'"
->>>>>>> Stashed changes
       >
         <ul>
           <li>
@@ -107,16 +95,11 @@
               <!--/ Cart Items Counter -->
             </a>
           </li>
-<<<<<<< Updated upstream
-          <li class="relative" x-data="{open: false}">
-            <a href="#" class="flex justify-between items-center py-2 px-3 hover:bg-slate-800" @click="open = !open"> 
-=======
           <li x-data="{open: false}" class="relative">
             <a
               @click="open = !open"
               class="cursor-pointer flex justify-between items-center py-2 px-3 hover:bg-slate-800"
             >
->>>>>>> Stashed changes
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -147,15 +130,12 @@
                 />
               </svg>
             </a>
-<<<<<<< Updated upstream
-            <ul class="z-10 right-0 bg-slate-800 py-2" x-show="open" x-transition>
-=======
+
             <ul
               x-show="open"
               x-transition
               class="z-10 right-0 bg-slate-800 py-2"
             >
->>>>>>> Stashed changes
               <li>
                 <a href="/src/profile.html" class="flex px-3 py-2 hover:bg-slate-900">
                   <svg
@@ -339,16 +319,11 @@
               ></small>
             </a>
           </li>
-<<<<<<< Updated upstream
-          <li class="relative" x-data="{open: false}">
-            <a href="#" class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900" @click="open = !open">
-=======
           <li x-data="{open: false}" class="relative">
             <a
               @click="open = !open"
               class="cursor-pointer flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
             >
->>>>>>> Stashed changes
               <span class="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -379,9 +354,6 @@
                 />
               </svg>
             </a>
-<<<<<<< Updated upstream
-            <ul class="absolute z-10 right-0 bg-slate-800 py-2 w-48" x-show="open" @click.outside="open = !open">
-=======
             <ul
               @click.outside="open = false"
               x-show="open"
@@ -389,7 +361,6 @@
               x-cloak
               class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
             >
->>>>>>> Stashed changes
               <li>
                 <a
                   href="/src/profile.html"
@@ -521,14 +492,10 @@
           </li>
         </ul>
       </nav>
-<<<<<<< Updated upstream
-      <button class="p-4 block md:hidden" @click="menuOpen = !menuOpen">
-=======
       <button
         @click="mobileMenuOpen = !mobileMenuOpen"
         class="p-4 block md:hidden"
       >
->>>>>>> Stashed changes
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"

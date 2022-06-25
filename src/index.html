@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
 
-<<<<<<< Updated upstream
-=======
+
     <!-- Alpine Plugins -->
     <script
       defer
@@ -17,18 +16,10 @@
       src="https://unpkg.com/@alpinejs/collapse@3.10.2/dist/cdn.min.js"
     ></script>
     <script defer src="app.js"></script>
->>>>>>> Stashed changes
     <script
       defer
       src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"
     ></script>
-<<<<<<< Updated upstream
-    <script src="app.js"></script>
-  </head>
-  <body x-data="productList">
-    <header
-      x-data="{menuOpen: false}"
-=======
 
     <style>
       [x-cloak] {
@@ -39,7 +30,6 @@
   <body>
     <header
       x-data="{mobileMenuOpen: false}"
->>>>>>> Stashed changes
       class="flex justify-between bg-slate-800 shadow-md text-white"
     >
       <div>
@@ -48,11 +38,7 @@
       <!-- Responsive Menu -->
       <div
         class="block fixed z-10 top-0 bottom-0 height h-full w-[220px] transition-all bg-slate-900 md:hidden"
-<<<<<<< Updated upstream
-        :class="menuOpen ? 'left-0' : 'left-[-220px]'"
-=======
         :class="mobileMenuOpen ? 'left-0' : '-left-[220px]'"
->>>>>>> Stashed changes
       >
         <ul>
           <li>
@@ -81,15 +67,9 @@
           <li>
             <a
               href="/src/cart.html"
-<<<<<<< Updated upstream
-              class="flex relative items-center py-2 px-3 transition-colors hover:bg-slate-800"
-            >
-              <span class="flex items-center justify-between">
-=======
               class="relative flex items-center justify-between py-2 px-3 transition-colors hover:bg-slate-800"
             >
               <div class="flex items-center">
->>>>>>> Stashed changes
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-5 w-5 mr-2 -mt-1"
@@ -105,22 +85,6 @@
                   />
                 </svg>
                 Cart
-<<<<<<< Updated upstream
-              </span>
-              <template x-if="cartItemCount > 0">
-                <span
-                  class="absolute z-10 top-0 right-2 bg-red-600 text-white px-2 rounded-xl"
-                  x-text="cartItemCount"
-                ></span>
-              </template>
-            </a>
-          </li>
-          <li class="relative" x-data="{open: false}">
-            <a
-              href="#"
-              class="flex justify-between items-center py-2 px-3 hover:bg-slate-800"
-              @click="open = !open"
-=======
               </div>
               <!-- Cart Items Counter -->
               <small
@@ -136,7 +100,6 @@
             <a
               @click="open = !open"
               class="cursor-pointer flex justify-between items-center py-2 px-3 hover:bg-slate-800"
->>>>>>> Stashed changes
             >
               <span class="flex items-center">
                 <svg
@@ -169,15 +132,9 @@
               </svg>
             </a>
             <ul
-<<<<<<< Updated upstream
-              class="z-10 right-0 bg-slate-800 py-2"
-              x-show="open"
-              x-transition
-=======
               x-show="open"
               x-transition
               class="z-10 right-0 bg-slate-800 py-2"
->>>>>>> Stashed changes
             >
               <li>
                 <a
@@ -339,11 +296,7 @@
           <li>
             <a
               href="/src/cart.html"
-<<<<<<< Updated upstream
-              class="flex relative items-center py-navbar-item px-navbar-item hover:bg-slate-900"
-=======
               class="relative inline-flex items-center py-navbar-item px-navbar-item hover:bg-slate-900"
->>>>>>> Stashed changes
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -360,22 +313,6 @@
                 />
               </svg>
               Cart
-<<<<<<< Updated upstream
-              <template x-if="cartItemCount > 0">
-                <span
-                  class="absolute top-4 -right-1 bg-red-600 text-white px-2 rounded-xl"
-                  x-text="cartItemCount"
-                ></span>
-              </template>
-            </a>
-          </li>
-          <li class="relative" x-data="{open: false}">
-            <a
-              href="#"
-              class="flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
-              @click="open = !open"
-              @click.outside="open = false"
-=======
               <small
                 x-show="$store.header.cartItems"
                 x-transition
@@ -389,7 +326,6 @@
             <a
               @click="open = !open"
               class="cursor-pointer flex items-center py-navbar-item px-navbar-item pr-5 hover:bg-slate-900"
->>>>>>> Stashed changes
             >
               <span class="flex items-center">
                 <svg
@@ -422,17 +358,11 @@
               </svg>
             </a>
             <ul
-<<<<<<< Updated upstream
-              class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
-              x-show="open"
-              x-transition
-=======
               @click.outside="open = false"
               x-show="open"
               x-transition
               x-cloak
               class="absolute z-10 right-0 bg-slate-800 py-2 w-48"
->>>>>>> Stashed changes
             >
               <li>
                 <a
@@ -565,14 +495,10 @@
           </li>
         </ul>
       </nav>
-<<<<<<< Updated upstream
-      <button class="p-4 block md:hidden" @click="menuOpen = !menuOpen">
-=======
       <button
         @click="mobileMenuOpen = !mobileMenuOpen"
         class="p-4 block md:hidden"
       >
->>>>>>> Stashed changes
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -623,14 +549,9 @@
           </div>
           <div class="flex justify-between py-3 px-4">
             <button
-<<<<<<< Updated upstream
-              class="w-10 h-10 rounded-full border border-1 border-purple-600 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white active:bg-purple-800 transition-colors"
-              @click="addToWatchlist"
-=======
               @click="addToWatchlist()"
               class="w-10 h-10 rounded-full border border-1 border-purple-600 flex items-center justify-center hover:bg-purple-600 hover:text-white active:bg-purple-800 transition-colors"
               :class="isInWatchlist(id) ? 'bg-purple-600 text-white' : 'text-purple-600'"
->>>>>>> Stashed changes
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -647,13 +568,9 @@
                 />
               </svg>
             </button>
-<<<<<<< Updated upstream
-            <button class="btn-primary" @click="addToCart">Add to Cart</button>
-=======
             <button class="btn-primary" @click="addToCart(id)">
               Add to Cart
             </button>
->>>>>>> Stashed changes
           </div>
         </div>
         <!--/ Product Item -->
@@ -704,13 +621,9 @@
                 />
               </svg>
             </button>
-<<<<<<< Updated upstream
-            <button class="btn-primary" @click="addToCart">Add to Cart</button>
-=======
             <button class="btn-primary" @click="addToCart(id)">
               Add to Cart
             </button>
->>>>>>> Stashed changes
           </div>
         </div>
         <!--/ Product Item -->
@@ -753,13 +666,9 @@
                 />
               </svg>
             </button>
-<<<<<<< Updated upstream
-            <button class="btn-primary" @click="addToCart">Add to Cart</button>
-=======
             <button class="btn-primary" @click="addToCart()">
               Add to Cart
             </button>
->>>>>>> Stashed changes
           </div>
         </div>
         <!--/ Product Item -->
@@ -1111,21 +1020,6 @@
       <!--/ Product List -->
     </main>
 
-<<<<<<< Updated upstream
-    <div
-      class="fixed flex justify-between items-center left-1/2 top-16 -translate-x-1/2 z-40 shadow-xl bg-green-600 text-white py-3 px-4 rounded"
-      x-show="notification.show"
-      style="display: none"
-    >
-      <span x-text="notification.message"></span>
-      <button
-        class="w-6 h-6 ml-4 flex justify-center items-center rounded-full transition-colors hover:bg-black/20"
-        @click="notification.show = false"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
-=======
     <!-- Toast -->
     <div
       x-data="toast"
@@ -1143,7 +1037,6 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
->>>>>>> Stashed changes
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -1156,9 +1049,6 @@
           />
         </svg>
       </button>
-<<<<<<< Updated upstream
-    </div>
-=======
       <!-- Progress -->
       <div>
         <div
@@ -1168,6 +1058,5 @@
       </div>
     </div>
     <!--/ Toast -->
->>>>>>> Stashed changes
   </body>
 </html>
