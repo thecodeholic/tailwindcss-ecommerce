@@ -521,8 +521,8 @@
 
     <main class="p-5">
       <div class="container mx-auto">
-        <div class="grid gap-6 grid-cols-5">
-          <div class="col-span-3">
+        <div class="grid gap-6 grid-cols-1 lg:grid-cols-5">
+          <div class="lg:col-span-3">
             <div
               x-data="{
   images: ['img/1_1.jpg', 'img/1_2.jpg', 'img/1_3.jpg', 'img/1_4.jpg'],
@@ -550,7 +550,7 @@
                     x-show="activeImage === image"
                     class="aspect-w-3 aspect-h-2"
                   >
-                    <img :src="image" alt="" class="object-cover" />
+                    <img :src="image" alt="" class="w-auto mx-auto"/>
                   </div>
                 </template>
                 <a
@@ -599,13 +599,13 @@
                     class="cursor-pointer w-[80px] border border-gray-300 hover:border-purple-500 flex items-center justify-center"
                     :class="{'border-purple-600': activeImage === image}"
                   >
-                    <img :src="image" alt="" class="object-cover" />
+                    <img :src="image" alt="" class="w-auto max-auto max-h-full"/>
                   </a>
                 </template>
               </div>
             </div>
           </div>
-          <div class="col-span-2">
+          <div class="lg:col-span-2">
             <h1 class="text-lg font-semibold">
               Logitech G502 HERO High Performance Wired Gaming Mouse, HERO 25K
               Sensor, 25,600 DPI, RGB, Adjustable Weights, 11
